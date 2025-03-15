@@ -1,0 +1,40 @@
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 11;
+  }
+  
+  .floating-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color:#efb74f;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(255, 255, 255);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .floating-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    border-color: #edfb4f;
+  }
+  
+  .floating-button.whatsapp {
+    background-color: rgb(42, 40, 40);
+  }
+   .floating-button.call {
+    background-color: rgb(42, 40, 40);
+  }
+  .floating-button.map {
+    background-color: rgb(42, 40, 40);
+  }
+  

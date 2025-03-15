@@ -1,0 +1,173 @@
+/* body{
+    height: 800px;
+
+} */
+  .header {
+    /* position: absolute; */
+    width: 100%;
+    height: 100px;
+    background-color: rgb(225, 224, 224);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    direction: rtl;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+ }
+  .transtationAndIcons {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+  }
+  .translation {
+    display: flex;
+    gap: 3px;
+    margin-left: 80px;
+    margin-top: 1%;
+  }
+  .icons {
+    display: flex;
+    gap: 5px;
+    margin-right: 80px;
+    margin-top: 1%;
+    color:black;
+    cursor: pointer;
+  }
+  .iconStyle {
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ar {
+    text-decoration: none;
+    color: black;
+  }
+  .hr {
+    width: 89%;
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
+    color: black;
+  }
+  
+  .mainHeader {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+
+
+  }
+  .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between logo and words */
+}
+
+.logoImage {
+    width: 100px; /* Adjust logo size */
+    height: auto;
+}
+
+.split-words {
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+}
+
+.split-words span {
+    position: relative;
+    padding: 0 10px;
+}
+
+.split-words span:not(:last-child)::after {
+    content: "|"; /* Adds vertical separator */
+    position: absolute;
+    right: -10px;
+    color: gray;
+    font-weight: normal;
+}
+
+
+  .mainHeader .d-flex {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .logoImage {
+    max-width: 80px;
+  }
+  .links {
+    color:black;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+
+
+  .paragraph1 {
+    font-size: 65px;
+    font-weight: bold;
+  }
+  
+
+  .btn2 {
+    width: 110px;
+    height: 40px;
+    background-color: #189cce;
+    color: white;
+    border: none;
+    border-radius: 33px;
+    cursor: pointer;
+    margin-left: 70px;
+    margin-top: 7%;
+  }
+  .btn2:hover{
+    background-color: #0f6281;
+
+  }
+  
+
+  @media only screen and (max-width: 990px) {
+
+   
+      .links-container {
+        direction: rtl;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: flex-start;
+      }
+      .links {
+        margin-bottom: 50px;
+      }
+      .logo-section{
+        margin-top: -22px;  
+      }
+      .header {
+        height: 115px;
+      }
+
+  }
+  @media only screen and (max-width: 840px) {
+    .header{
+      height: 120px;
+    }
+  
+      
+  }
+  @media only screen and (max-width: 440px) {
+    .links {
+      font-size: 13px;
+      margin-top: 8%;
+      font-weight: bold;
+    }
+  }
+ 
+ 
+  
