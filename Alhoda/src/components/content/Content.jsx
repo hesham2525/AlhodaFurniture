@@ -4,7 +4,9 @@ import { GoDot } from "react-icons/go";
 import "./content.css";
 import { FaWhatsapp } from "react-icons/fa";
 import LeafletMap from "../Map/Map";
-import ImageSlider from "../Slider/slider";
+import ImageSlider3 from "../Slider3/slider";
+
+
 import { useEffect } from "react";
 
 export default function Content() {
@@ -30,7 +32,7 @@ export default function Content() {
     [
       { id: 1, name: " مطابخ حديثة", img: "/مطابخ2.jpg" },
       { id: 2, name: " L كنب حرف ", img: "/كنب حرف L 2.jpg" },
-      { id: 4, name: " L كنب حرف   ", img: "/L كنب حرف.jpg" },
+      { id: 4, name: " كنب مودرن   ", img: "/public/كنب مودرن.jpg" },
       { id: 3, name: " غرف نوم تفصيل  ", img: "/نوم تفصيل 2.jpg" },
     ],
     [
@@ -44,6 +46,58 @@ export default function Content() {
       { id: 3, name: "غرف نوم وطني ", img: "/نوم وطني 2.jpg" },
     ],
   ];
+  const imagesRommWatany = [
+    "/نوم وطني 1.jpg",
+    "/نوم وطني 2.jpg",
+    "/نوم وطني 3.jpg",
+    "/نوم وطني 4.jpg",
+    "/نوم وطني 5.jpg",
+    "/ننوم وطني 6.jpg",
+    "/نوم وطني7.jpg",
+    "/نوم وطني 8.jpg",
+    "/نوم وطني 9.jpg",
+    "/نوم وطني 10.jpg",
+  ];
+  const imagesRoomTafsel = [
+    "/نوم تفصيل1.1.jpg",
+    "/نوم تفصيل1.jpg",
+    "/نوم تفصيل 2.jpg",
+    "/نوم تفصيل 3.jpg",
+    "/نوم تفصيل 2.2.jpg",
+    "/نوم تفصيل4.jpg",
+    "/نوم تفصيل5.jpg",
+    "/نوم تفصيل6.jpg",
+    "/نوم تفصيل7.jpg",
+    "/نوم تفصيل9.jpg",
+  ];
+  const imagesDataModern = [
+    "/مودرن1.jpg",
+    "/مودرن2.jpg",
+    "/مودرن3.jpg",
+    "/مودرن4.jpg",
+    "/مودرن5.jpg",
+    "/مودرن6.jpg",
+    "/مودرن7.jpg",
+    "/مودرن8.jpg",
+    "/مودرن10.jpg",
+  ];
+  const imagesDataLU = [
+    "/public/L2.jpg",
+    "/public/U1.jpg",
+    "/public/L5.jpg",
+    "/public/U2.jpg",
+    "/public/L3.jpg",
+    "/public/U3.jpg",
+    "/public/L4.jpg",
+    "/public/U4.jpg",
+    "/public/L6.jpg",
+    "/public/U5.jpg",
+    "/public/L.jpg",
+
+  ];
+ 
+  
+  
   const handleDotClick = (index) => {
     setActiveSlide(index);
   };
@@ -146,12 +200,12 @@ export default function Content() {
             </div>
           ))}
         </div>
-        <p className="para1"> اولا غرف نوم </p>
+        <p className="para1">   غرف نوم وطني </p>
         <br />
 
         <div className="secSlider">
           <div>
-            <ImageSlider />
+            <ImageSlider3  images={imagesRommWatany} />
           </div>
           <div
             className="sec2Info"
@@ -164,11 +218,12 @@ export default function Content() {
               fontFamily: "Arial, sans-serif",
             }}
           >
+           
             <p className="mainP" style={{}}>
-              🛋️ **اكتشف مجموعة الأثاث الجديدة لدينا!**
+              غرف نوم وطني 🛋️
             </p>
             <p className="sideP">
-              نقدم تشكيلة واسعة من <strong>الأثاث العصري والمودرن</strong> الذي
+              نقدم تشكيلة واسعة من <strong>غرف النوم الوطني العصري والمودرن</strong> الذي
               يضفي لمسة من الأناقة والراحة على منزلك.
             </p>
             <p className="sideP2">
@@ -190,41 +245,168 @@ export default function Content() {
           </div>
         </div>
         <br />
-      </div>
-      <br />
-      <br />
+        <p className="para1">   غرف نوم تفصيل </p>
 
-      <div className="citiesImages">
-        {product[activeSlide].map((item) => (
-          <div className="cityImage" key={item.id}>
-            <button
-              className="btnWhatsapp"
-              onClick={() => handleBuyNowClick(item.name)}
-            >
-              {" "}
-              <img className="imgCity" src={item.img} alt={item.name} />
-            </button>
-
-            <br />
-            <h5>{item.name}</h5>
+        <div className="secSlider">
+          <div>
+            <ImageSlider3  images={imagesRoomTafsel} />
           </div>
-        ))}
-      </div>
-      <div className="dots">
-        {product.map((_, index) => (
           <div
-            key={index}
-            className={`dot ${activeSlide === index ? "activeDot" : ""}`}
-            onClick={() => handleDotClick(index)}
+            className="sec2Info"
+            style={{
+              backgroundColor: "#f8f9fa",
+              padding: "20px",
+              borderRadius: "15px",
+              textAlign: "right",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              fontFamily: "Arial, sans-serif",
+            }}
           >
-            {activeSlide === index ? (
-              <GoDotFill style={{ color: "#3a8ae0", fontSize: "20px" }} />
-            ) : (
-              <GoDot style={{ fontSize: "20px" }} />
-            )}
+            
+            <p className="mainP" style={{}}>
+              غرف نوم تفصيل 🛋️
+            </p>
+            <p className="sideP">
+            يوجد لدينا تشكيلة من الغرف الجديده <strong>غرف النوم الوطني العصري والمودرن</strong>
+            جاهزه وتفصيل من المصنع غرفه نفرين.
+            </p>
+            <p className="sideP">
+            مكونه من دولاب وتسريحه وكرسي تسريحه وشوفنيره و 2 كمدينو وسرير ويوجد غرف نفر ونص ونفر شامل توصيل تركيب .
+            </p>
+            <p className="sideP2">
+              ✔ تصاميم فريدة تناسب جميع الأذواق والمساحات.
+            </p>
+            <p className="sideP2">
+              ✔ خامات عالية الجودة تضمن المتانة والاستدامة.
+            </p>
+            <p className="sideP2">
+              ✔ أسعار تنافسية مع عروض حصرية وتخفيضات رائعة.
+            </p>
+            <p className="sideP2">
+              ✔ خدمة التوصيل والتركيب لجميع مناطق الرياض.
+            </p>
+            <p className="sideP3">
+              💬 تواصل معنا الآن للحصول على استشارة مجانية واختيار الأثاث
+              المثالي لمنزلك! 📞
+            </p>
           </div>
-        ))}
+        </div>
+       
+        <br />
+        <br />
+        <div className="btnWhatsap">
+        <a href="https://wa.me/+966547620899" className="ancurBtn">
+          {" "}
+          <button className="btn1">
+            {" "}
+            <FaWhatsapp size={20} /> .... تواصل معنا عبر الوتساب{" "}
+          </button>
+        </a>
       </div>
+      
+      <p className="para1"> كنب مودرن    </p>
+        <p className="para1">  </p>
+
+
+        <div className="secSlider">
+          <div>
+          <ImageSlider3 images={imagesDataModern} />
+          </div>
+          <div
+            className="sec2Info"
+            style={{
+              backgroundColor: "#f8f9fa",
+              padding: "20px",
+              borderRadius: "15px",
+              textAlign: "right",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              fontFamily: "Arial, sans-serif",
+            }}
+          >
+            
+            <p className="mainP" style={{}}>
+             كنب مودرن
+            </p>
+            <p className="sideP">
+            يوجد لدينا تشكيلة من الغرف الجديده <strong>غرف النوم الوطني العصري والمودرن</strong>
+            جاهزه وتفصيل من المصنع غرفه نفرين.
+            </p>
+            <p className="sideP">
+            مكونه من دولاب وتسريحه وكرسي تسريحه وشوفنيره و 2 كمدينو وسرير ويوجد غرف نفر ونص ونفر شامل توصيل تركيب .
+            </p>
+            <p className="sideP2">
+              ✔ تصاميم فريدة تناسب جميع الأذواق والمساحات.
+            </p>
+            <p className="sideP2">
+              ✔ خامات عالية الجودة تضمن المتانة والاستدامة.
+            </p>
+            <p className="sideP2">
+              ✔ أسعار تنافسية مع عروض حصرية وتخفيضات رائعة.
+            </p>
+            <p className="sideP2">
+              ✔ خدمة التوصيل والتركيب لجميع مناطق الرياض.
+            </p>
+            <p className="sideP3">
+              💬 تواصل معنا الآن للحصول على استشارة مجانية واختيار الأثاث
+              المثالي لمنزلك! 📞
+            </p>
+          </div>
+        </div>
+
+      
+        <p className="para1"> ( U كنب حرف ) ,  ( L كنب حرف ) </p>
+        <p className="para1">  </p>
+
+
+        <div className="secSlider">
+          <div>
+          <ImageSlider3 images={imagesDataLU} />
+          </div>
+          <div
+            className="sec2Info"
+            style={{
+              backgroundColor: "#f8f9fa",
+              padding: "20px",
+              borderRadius: "15px",
+              textAlign: "right",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              fontFamily: "Arial, sans-serif",
+            }}
+          >
+            
+            <p className="mainP" style={{}}>
+            U كنب حرف ,  L كنب حرف 
+            </p>
+            <p className="sideP">
+            يوجد لدينا تشكيلة من الغرف الجديده <strong>غرف النوم الوطني العصري والمودرن</strong>
+            جاهزه وتفصيل من المصنع غرفه نفرين.
+            </p>
+            <p className="sideP">
+            مكونه من دولاب وتسريحه وكرسي تسريحه وشوفنيره و 2 كمدينو وسرير ويوجد غرف نفر ونص ونفر شامل توصيل تركيب .
+            </p>
+            <p className="sideP2">
+              ✔ تصاميم فريدة تناسب جميع الأذواق والمساحات.
+            </p>
+            <p className="sideP2">
+              ✔ خامات عالية الجودة تضمن المتانة والاستدامة.
+            </p>
+            <p className="sideP2">
+              ✔ أسعار تنافسية مع عروض حصرية وتخفيضات رائعة.
+            </p>
+            <p className="sideP2">
+              ✔ خدمة التوصيل والتركيب لجميع مناطق الرياض.
+            </p>
+            <p className="sideP3">
+              💬 تواصل معنا الآن للحصول على استشارة مجانية واختيار الأثاث
+              المثالي لمنزلك! 📞
+            </p>
+          </div>
+        </div>
+    </div>
+      <br />
+      <br />
+
+    
 
       <div className="information2">
         <p className="paraWhy">📞 لماذا تختارنا؟</p>
@@ -285,7 +467,7 @@ export default function Content() {
       <br />
       <div className="secSlider">
         <div>
-          <ImageSlider />
+          {/* <ImageSlider /> */}
         </div>
         <div
           className="sec2Info"
