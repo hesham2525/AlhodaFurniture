@@ -6,7 +6,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import LeafletMap from "../Map/Map";
 import ImageSlider3 from "../Slider3/slider";
 
-
 import { useEffect } from "react";
 
 export default function Content() {
@@ -41,7 +40,7 @@ export default function Content() {
         name: "  مطابخ",
         img: "/مطابخ 3.jpg",
       },
-      { id: 2, name: " غرف نوم تفصيل", img: "/نوم تفصيل 3.jpg" },
+      { id: 2, name: " غرف نوم تفصيل", img: "/نوم تفصيل8.jpg" },
       { id: 4, name: " U كنب حرف ", img: "/U1كنب حرف .jpg" },
       { id: 3, name: "غرف نوم وطني ", img: "/نوم وطني 2.jpg" },
     ],
@@ -82,22 +81,43 @@ export default function Content() {
     "/مودرن10.jpg",
   ];
   const imagesDataLU = [
-    "/public/L2.jpg",
-    "/public/U1.jpg",
-    "/public/L5.jpg",
-    "/public/U2.jpg",
-    "/public/L3.jpg",
-    "/public/U3.jpg",
-    "/public/L4.jpg",
-    "/public/U4.jpg",
-    "/public/L6.jpg",
-    "/public/U5.jpg",
-    "/public/L.jpg",
-
+    "/L2.jpg",
+    "/U1.jpg",
+    "/L5.jpg",
+    "/U2.jpg",
+    "/L3.jpg",
+    "/U3.jpg",
+    "/L4.jpg",
+    "/U4.jpg",
+    "/L6.jpg",
+    "/U5.jpg",
+    "/L.jpg",
   ];
- 
-  
-  
+  const imagesDataKIT = [
+    "/public/مطبخ1.jpg",
+    "/public/مطبخ2.jpg",
+    "/public/مطبخ4.jpg",
+    "/public/مطبخ5.jpg",
+    "/public/مطبخ6.jpg",
+    "/public/مطبخ7.jpg",
+    "/public/مطبخ8.jpg",
+    "/public/مطبخ9.jpg",
+    "/public/مطبخ10.jpg",
+    "/public/مطابخ 3.jpg",
+  ];
+  const imagesData711 = [
+    "/public/كنببب1.jpg",
+    "/public/كنببب2.jpg",
+    "/public/كنببب3.jpg",
+    "/public/كنببب4.jpg",
+    "/public/كنببب5.jpg",
+    "/public/كنببب6.jpg",
+    "/public/كنببب7.jpg",
+    "/public/كنبب8.jpg",
+    "/public/كنببب9.jpg",
+    "/public/كنبب10.jpg",
+  ];
+
   const handleDotClick = (index) => {
     setActiveSlide(index);
   };
@@ -112,7 +132,7 @@ export default function Content() {
     <>
       <div className="Containar">
         <div className="ImageCover">
-          <img className="img1" src="/backgrpund-1.jpg" alt="" />
+          <img className="img1" src="/backgrpund-1.jpg" alt="" loading="lazy" />
           <div className="textCover">
             <h2>مؤسسة نور الهدى </h2>
             <p> للأثاث الجديد المودرن و الكلاسيك بالرياض</p>
@@ -138,7 +158,11 @@ export default function Content() {
       </div>
       <br />
       <div className="btnWhatsap">
-        <a href="https://wa.me/+966547620899" className="ancurBtn">
+        <a
+          href="https://wa.me/+966598608273"
+          className="ancurBtn"
+          target="_blank"
+        >
           {" "}
           <button className="btn1">
             {" "}
@@ -148,20 +172,22 @@ export default function Content() {
       </div>
 
       <div className="information">
-        <p className="para1">أفضل شركة بيع أثاث جديد في الرياض</p>
+        <div className="infoSection1">
+          <p className="para1">أفضل شركة بيع أثاث جديد في الرياض</p>
 
-        <p className="para2">
-          تعتبر شركتنا من أفضل الشركات المتخصصة في بيع الأثاث الجديد المودرن
-          والكلاسيك في الرياض، نقدم لعملائنا أحدث التصاميم العصرية والكلاسيكية
-        </p>
-        <p className="para2">
-          نقدم تشكيلة واسعة من غرف النوم الوطني و التفصيل التي تناسب جميع
-          الاذواق بأفضل الأسعار، مع ضمان الجودة والتصميم الراقي.
-        </p>
-        <p className="para2">
-          و كنب بجميع المقاسات و مطابخ حديثة وصالات استقبال - مجالس وجلسات عربية
-          فاخرة
-        </p>
+          <p className="para2">
+            تعتبر شركتنا من أفضل الشركات المتخصصة في بيع الأثاث الجديد المودرن
+            والكلاسيك في الرياض، نقدم لعملائنا أحدث التصاميم العصرية والكلاسيكية
+          </p>
+          <p className="para2">
+            نقدم تشكيلة واسعة من غرف النوم الوطني و التفصيل التي تناسب جميع
+            الاذواق بأفضل الأسعار، مع ضمان الجودة والتصميم الراقي.
+          </p>
+          <p className="para2">
+            و كنب بجميع المقاسات و مطابخ حديثة وصالات استقبال - مجالس وجلسات
+            عربية فاخرة
+          </p>
+        </div>
         <br />
 
         <div className="citiesImages">
@@ -200,12 +226,12 @@ export default function Content() {
             </div>
           ))}
         </div>
-        <p className="para1">   غرف نوم وطني </p>
+        <p className="para1"> غرف نوم وطني </p>
         <br />
 
         <div className="secSlider">
           <div>
-            <ImageSlider3  images={imagesRommWatany} />
+            <ImageSlider3 images={imagesRommWatany} />
           </div>
           <div
             className="sec2Info"
@@ -218,13 +244,21 @@ export default function Content() {
               fontFamily: "Arial, sans-serif",
             }}
           >
-           
             <p className="mainP" style={{}}>
               غرف نوم وطني 🛋️
             </p>
             <p className="sideP">
-              نقدم تشكيلة واسعة من <strong>غرف النوم الوطني العصري والمودرن</strong> الذي
-              يضفي لمسة من الأناقة والراحة على منزلك.
+              نقدم تشكيلة واسعة من{" "}
+              <strong>غرف النوم الوطني العصري والمودرن</strong> الذي يضفي لمسة
+              من الأناقة والراحة على منزلك.
+            </p>
+            <p className="sideP">
+              يوجد لدينا سراير ودواليب جميع المقاسات والأحجام وغرف نوم نفر ونفر
+              ونص ونفرين
+            </p>
+            <p className="sideP">
+              وايضا غرف نوم اطفال ٢سرير ومراتب طبي ضغط ٦٠لجميع المقاسات
+              والأحجام
             </p>
             <p className="sideP2">
               ✔ تصاميم فريدة تناسب جميع الأذواق والمساحات.
@@ -245,11 +279,11 @@ export default function Content() {
           </div>
         </div>
         <br />
-        <p className="para1">   غرف نوم تفصيل </p>
+        <p className="para1"> غرف نوم تفصيل </p>
 
         <div className="secSlider">
           <div>
-            <ImageSlider3  images={imagesRoomTafsel} />
+            <ImageSlider3 images={imagesRoomTafsel} />
           </div>
           <div
             className="sec2Info"
@@ -262,16 +296,169 @@ export default function Content() {
               fontFamily: "Arial, sans-serif",
             }}
           >
-            
             <p className="mainP" style={{}}>
               غرف نوم تفصيل 🛋️
             </p>
             <p className="sideP">
-            يوجد لدينا تشكيلة من الغرف الجديده <strong>غرف النوم الوطني العصري والمودرن</strong>
-            جاهزه وتفصيل من المصنع غرفه نفرين.
+              يوجد لدينا تشكيلة من{" "}
+              <strong>غرف الجديده جاهزه وتفصيل من المصنع </strong>
+              مكونه من دولاب وتسريحه وكرسي تسريحه وشوفنيره
+            </p>
+
+            <p className="sideP">
+              و 2 كمدينو وسرير ويوجد غرف نفر ونص ونفر شامل توصيل تركيب
+            </p>
+            <p className="sideP2">✔ غرف مودرن وغرف المنتان</p>
+            <p className="sideP2">✔ غرف نوم خشب تيلندي وغرف نوم خشب المنتان</p>
+            <p className="sideP2">
+              ✔ أسعار تنافسية مع عروض حصرية وتخفيضات رائعة
+            </p>
+            <p className="sideP2">✔ خدمة التوصيل والتركيب لجميع مناطق الرياض</p>
+            <p className="sideP3">
+              💬 تواصل معنا الآن للحصول على استشارة مجانية واختيار الأثاث
+              المثالي لمنزلك! 📞
+            </p>
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <div className="btnWhatsap">
+          <a
+            href="https://wa.me/+966598608273"
+            className="ancurBtn"
+            target="_blank"
+          >
+            {" "}
+            <button className="btn1">
+              {" "}
+              <FaWhatsapp size={20} /> .... تواصل معنا عبر الوتساب{" "}
+            </button>
+          </a>
+        </div>
+
+        <p className="para1"> كنب مودرن </p>
+        <p className="para1"> </p>
+
+        <div className="secSlider">
+          <div>
+            <ImageSlider3 images={imagesDataModern} />
+          </div>
+          <div
+            className="sec2Info"
+            style={{
+              backgroundColor: "#f8f9fa",
+              padding: "20px",
+              borderRadius: "15px",
+              textAlign: "right",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              fontFamily: "Arial, sans-serif",
+            }}
+          >
+            <p className="mainP" style={{}}>
+              كنب مودرن
             </p>
             <p className="sideP">
-            مكونه من دولاب وتسريحه وكرسي تسريحه وشوفنيره و 2 كمدينو وسرير ويوجد غرف نفر ونص ونفر شامل توصيل تركيب .
+              يوجد لدينا تشكيلة من الكنب الامريكي المودرن
+              <strong>كنب امريكي قطن كثافه عاليا مريح بالجلوس </strong>
+              مقاس 3 في 3 و بسعر المصنع
+            </p>
+
+            <p className="sideP2">
+              ✔ تصاميم فريدة تناسب جميع الأذواق والمساحات.
+            </p>
+            <p className="sideP2">
+              ✔ خامات عالية الجودة تضمن المتانة والاستدامة.
+            </p>
+            <p className="sideP2">
+              ✔ أسعار تنافسية مع عروض حصرية وتخفيضات رائعة.
+            </p>
+            <p className="sideP2">
+              ✔ خدمة التوصيل والتركيب لجميع مناطق الرياض.
+            </p>
+            <p className="sideP3">
+              💬 تواصل معنا الآن للحصول على استشارة مجانية واختيار الأثاث
+              المثالي لمنزلك! 📞
+            </p>
+          </div>
+        </div>
+
+        <p className="para1"> ( U كنب حرف ) , ( L كنب حرف ) </p>
+        <p className="para1"> </p>
+
+        <div className="secSlider">
+          <div>
+            <ImageSlider3 images={imagesDataLU} />
+          </div>
+          <div
+            className="sec2Info"
+            style={{
+              backgroundColor: "#f8f9fa",
+              padding: "20px",
+              borderRadius: "15px",
+              textAlign: "right",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              fontFamily: "Arial, sans-serif",
+            }}
+          >
+            <p className="mainP" style={{}}>
+              U كنب حرف , L كنب حرف
+            </p>
+            <p className="sideP">
+              كنب جديد جاهز للطلب والاستفسار لجميع انحاء الرياض
+              <strong> كنب مودرن </strong>
+              💯 حرف ال مقاس ٣.٥ في ٣.٥
+            </p>
+            <p className="sideP">
+              كنب حر L مقاس ٣ونص طول في ٣ونص عرض و الطقم كامل خمس قطع
+            </p>
+            <p className="sideP">انتريه سبع أشخاص ٤ قطع</p>
+            <p className="sideP2">✔ اسفنج كثافه عاليه</p>
+            <p className="sideP2">
+              ✔   كنب حرف يو مقاس ٥في٤ يتكون من ١٠قطع ١٤متر
+            </p>
+            <p className="sideP2">
+              ✔ خامات عالية الجودة تضمن المتانة والاستدامة
+            </p>
+
+            <p className="sideP2">✔ خدمة التوصيل والتركيب لجميع مناطق الرياض</p>
+            <p className="sideP3">
+              💬 تواصل معنا الآن للحصول على استشارة مجانية واختيار الأثاث
+              المثالي لمنزلك! 📞
+            </p>
+          </div>
+        </div>
+
+        <p className="para1"> ( كنب 7 نفر ) , ( كنب 11 نفر ) </p>
+        <p className="para1"> </p>
+
+        <div className="secSlider">
+          <div>
+            <ImageSlider3 images={imagesData711} />
+          </div>
+          <div
+            className="sec2Info"
+            style={{
+              backgroundColor: "#f8f9fa",
+              padding: "20px",
+              borderRadius: "15px",
+              textAlign: "right",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              fontFamily: "Arial, sans-serif",
+            }}
+          >
+            <p className="mainP" style={{}}>
+              كنب 7 نفر , كنب 11 نفر
+            </p>
+            <p className="sideP">
+              يوجد لدينا تشكيلة من الغرف الجديده{" "}
+              <strong  > كنب 7 نفر , كنب 11 نفر  </strong>
+              جاهزه وتفصيل من المصنع .
+            </p>
+            <p className="sideP">
+              كنب مودرن 11 نفر 
+            و  كنب مودرن 7 نفر 
+
             </p>
             <p className="sideP2">
               ✔ تصاميم فريدة تناسب جميع الأذواق والمساحات.
@@ -291,11 +478,15 @@ export default function Content() {
             </p>
           </div>
         </div>
-       
-        <br />
-        <br />
-        <div className="btnWhatsap">
-        <a href="https://wa.me/+966547620899" className="ancurBtn">
+      </div>
+      <br />
+      <br />
+      <div className="btnWhatsap">
+        <a
+          href="https://wa.me/+966598608273"
+          className="ancurBtn"
+          target="_blank"
+        >
           {" "}
           <button className="btn1">
             {" "}
@@ -303,110 +494,49 @@ export default function Content() {
           </button>
         </a>
       </div>
-      
-      <p className="para1"> كنب مودرن    </p>
-        <p className="para1">  </p>
+      <p className="para1"> مطابخ جديدة و عصرية </p>
+      <p className="para1"> </p>
 
-
-        <div className="secSlider">
-          <div>
-          <ImageSlider3 images={imagesDataModern} />
-          </div>
-          <div
-            className="sec2Info"
-            style={{
-              backgroundColor: "#f8f9fa",
-              padding: "20px",
-              borderRadius: "15px",
-              textAlign: "right",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-              fontFamily: "Arial, sans-serif",
-            }}
-          >
-            
-            <p className="mainP" style={{}}>
-             كنب مودرن
-            </p>
-            <p className="sideP">
-            يوجد لدينا تشكيلة من الغرف الجديده <strong>غرف النوم الوطني العصري والمودرن</strong>
-            جاهزه وتفصيل من المصنع غرفه نفرين.
-            </p>
-            <p className="sideP">
-            مكونه من دولاب وتسريحه وكرسي تسريحه وشوفنيره و 2 كمدينو وسرير ويوجد غرف نفر ونص ونفر شامل توصيل تركيب .
-            </p>
-            <p className="sideP2">
-              ✔ تصاميم فريدة تناسب جميع الأذواق والمساحات.
-            </p>
-            <p className="sideP2">
-              ✔ خامات عالية الجودة تضمن المتانة والاستدامة.
-            </p>
-            <p className="sideP2">
-              ✔ أسعار تنافسية مع عروض حصرية وتخفيضات رائعة.
-            </p>
-            <p className="sideP2">
-              ✔ خدمة التوصيل والتركيب لجميع مناطق الرياض.
-            </p>
-            <p className="sideP3">
-              💬 تواصل معنا الآن للحصول على استشارة مجانية واختيار الأثاث
-              المثالي لمنزلك! 📞
-            </p>
-          </div>
+      <div className="secSlider">
+        <div>
+          <ImageSlider3 images={imagesDataKIT} />
         </div>
-
-      
-        <p className="para1"> ( U كنب حرف ) ,  ( L كنب حرف ) </p>
-        <p className="para1">  </p>
-
-
-        <div className="secSlider">
-          <div>
-          <ImageSlider3 images={imagesDataLU} />
-          </div>
-          <div
-            className="sec2Info"
-            style={{
-              backgroundColor: "#f8f9fa",
-              padding: "20px",
-              borderRadius: "15px",
-              textAlign: "right",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-              fontFamily: "Arial, sans-serif",
-            }}
-          >
-            
-            <p className="mainP" style={{}}>
-            U كنب حرف ,  L كنب حرف 
-            </p>
-            <p className="sideP">
-            يوجد لدينا تشكيلة من الغرف الجديده <strong>غرف النوم الوطني العصري والمودرن</strong>
-            جاهزه وتفصيل من المصنع غرفه نفرين.
-            </p>
-            <p className="sideP">
-            مكونه من دولاب وتسريحه وكرسي تسريحه وشوفنيره و 2 كمدينو وسرير ويوجد غرف نفر ونص ونفر شامل توصيل تركيب .
-            </p>
-            <p className="sideP2">
-              ✔ تصاميم فريدة تناسب جميع الأذواق والمساحات.
-            </p>
-            <p className="sideP2">
-              ✔ خامات عالية الجودة تضمن المتانة والاستدامة.
-            </p>
-            <p className="sideP2">
-              ✔ أسعار تنافسية مع عروض حصرية وتخفيضات رائعة.
-            </p>
-            <p className="sideP2">
-              ✔ خدمة التوصيل والتركيب لجميع مناطق الرياض.
-            </p>
-            <p className="sideP3">
-              💬 تواصل معنا الآن للحصول على استشارة مجانية واختيار الأثاث
-              المثالي لمنزلك! 📞
-            </p>
-          </div>
+        <div
+          className="sec2Info"
+          style={{
+            backgroundColor: "#f8f9fa",
+            padding: "20px",
+            borderRadius: "15px",
+            textAlign: "right",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+            fontFamily: "Arial, sans-serif",
+          }}
+        >
+          <p className="mainP" style={{}}>
+            مطابخ جديدة و عصرية
+          </p>
+          <p className="sideP">
+            يوجد لدينا تشكيلة من <strong>المطابخ الجديدة </strong>
+            جاهزه وتفصيل من المصنع على حسب طلب الزبون .
+          </p>
+          <p className="sideP">
+            مطابخ جديدة جاهزة صاج المونيوم مقاس 5 متر و 60 سم العمق 50 سم
+          </p>
+          <p className="sideP">
+            مطابخ جديدة جاهزة صاج كلادينج مقاس 5 متر و 60 سم العمق 50 سم
+          </p>
+          <p className="sideP2">مطابخ معدلة حسب مقاسات المطبخ</p>
+          <p className="sideP2">✔ تصاميم فريدة تناسب جميع الأذواق والمساحات</p>
+          <p className="sideP2">
+            يوجد جميع انواع الرخام الطبيعي والجلاكسي الصناعي 
+          </p>
+          <p className="sideP2">✔ خدمة التوصيل والتركيب لجميع مناطق الرياض</p>
+          <p className="sideP3">
+            💬 تواصل معنا الآن للحصول على استشارة مجانية واختيار الأثاث المثالي
+            لمنزلك! 📞
+          </p>
         </div>
-    </div>
-      <br />
-      <br />
-
-    
+      </div>
 
       <div className="information2">
         <p className="paraWhy">📞 لماذا تختارنا؟</p>
@@ -425,37 +555,16 @@ export default function Content() {
       <br />
 
       {/* <div className="btnWhatsap">
-          <a  href="https://wa.me/+966547620899" className="ancurBtn"> <button className="btn1" > <FaWhatsapp size={20} />  ....  تواصل معنا عبر الوتساب    </button></a>
+          <a  href="https://wa.me/+966598608273" className="ancurBtn" target="_blank"> <button className="btn1" > <FaWhatsapp size={20} />  ....  تواصل معنا عبر الوتساب    </button></a>
         </div> */}
       <hr />
-      <div className="information">
-        <p className="para11">
-          هل تبحث عن أفضل تشكيلة من الأثاث المودرن والكلاسيك في الرياض بأسعار
-          تنافسية؟
-        </p>
-        <br />
-        <p className="para22">
-          نقدم لكم أحدث التصاميم العصرية والكلاسيكية، بأعلى جودة وأسعار مميزة
-          تناسب جميع الميزانيات، حيث نوفر تشكيلة متنوعة تناسب كل الأذواق.
-        </p>
-        <br />
-        <p className="para22">
-          نحرص على تقديم أفضل الأثاث بأسعار مناسبة، مع ضمان الجودة والفخامة،
-          لنوفر لك تجربة شراء ممتعة تلبي احتياجاتك وتناسب جميع المساحات
-          والأذواق.
-        </p>
-        <br />
-        <p className="para22">
-          اختياراتك بين الأثاث المودرن والكلاسيك أصبحت أسهل معنا، مع تشكيلة
-          واسعة وتصاميم راقية تناسب كل منزل، ونسعد دائمًا بخدمتكم.
-        </p>
-        <br />
-      </div>
 
-      <br />
-      <br />
       <div className="btnWhatsap">
-        <a href="https://wa.me/+966547620899" className="ancurBtn">
+        <a
+          href="https://wa.me/+966598608273"
+          className="ancurBtn"
+          target="_blank"
+        >
           {" "}
           <button className="btn1">
             {" "}
@@ -465,50 +574,15 @@ export default function Content() {
       </div>
       <br />
       <br />
-      <div className="secSlider">
-        <div>
-          {/* <ImageSlider /> */}
-        </div>
-        <div
-          className="sec2Info"
-          style={{
-            backgroundColor: "#f8f9fa",
-            padding: "20px",
-            borderRadius: "15px",
-            textAlign: "right",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-            fontFamily: "Arial, sans-serif",
-          }}
-        >
-          <p className="mainP" style={{}}>
-            🛋️ **اكتشف مجموعة الأثاث الجديدة لدينا!**
-          </p>
-          <p className="sideP">
-            نقدم تشكيلة واسعة من <strong>الأثاث العصري والمودرن</strong> الذي
-            يضفي لمسة من الأناقة والراحة على منزلك.
-          </p>
-          <p className="sideP2">✔ تصاميم فريدة تناسب جميع الأذواق والمساحات.</p>
-          <p className="sideP2">
-            ✔ خامات عالية الجودة تضمن المتانة والاستدامة.
-          </p>
-          <p className="sideP2">
-            ✔ أسعار تنافسية مع عروض حصرية وتخفيضات رائعة.
-          </p>
-          <p className="sideP2">✔ خدمة التوصيل والتركيب لجميع مناطق الرياض.</p>
-          <p className="sideP3">
-            💬 تواصل معنا الآن للحصول على استشارة مجانية واختيار الأثاث المثالي
-            لمنزلك! 📞
-          </p>
-        </div>
-      </div>
-
-      <br />
-      <br />
 
       <LeafletMap />
 
       <div className="btnWhatsap">
-        <a href="https://wa.me/+966547620899" className="ancurBtn">
+        <a
+          href="https://wa.me/+966598608273"
+          className="ancurBtn"
+          target="_blank"
+        >
           {" "}
           <button className="btn1">
             {" "}

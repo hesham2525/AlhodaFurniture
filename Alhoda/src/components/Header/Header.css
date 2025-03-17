@@ -27,9 +27,9 @@
   }
   .icons {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
-    margin-right: 80px;
-    margin-top: 1%;
     color:black;
     cursor: pointer;
   }
@@ -118,15 +118,17 @@
   
 
   .btn2 {
-    width: 110px;
+    width: 105px;
     height: 40px;
     background-color: #189cce;
     color: white;
     border: none;
-    border-radius: 33px;
+    border-radius:10px;
     cursor: pointer;
-    margin-left: 70px;
-    margin-top: 7%;
+    font-size: 13px;
+    margin-right: 1%;
+    
+    
   }
   .btn2:hover{
     background-color: #0f6281;
@@ -167,6 +169,21 @@
       margin-top: 8%;
       font-weight: bold;
     }
+    .iconStyle {
+      border: 1px solid black;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
   }
  
  

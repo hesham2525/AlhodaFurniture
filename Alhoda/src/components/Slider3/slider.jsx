@@ -18,7 +18,7 @@ function ImageSlider3({ images }) {
     <Slider {...settings} style={{ width: "500px", margin: "auto", borderRadius: "50px" }}>
       {images.map((src, index) => (
         <div key={index}>
-          <img className="imgSlider" src={src} alt={`Slide ${index}`} width="100%" height="350px" />
+          <img className="imgSlider" src={src} alt={`Slide ${index}`} width="100%" height="350px"  loading="lazy"/>
         </div>
       ))}
     </Slider>

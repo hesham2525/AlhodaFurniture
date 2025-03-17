@@ -12,12 +12,12 @@ const customIcon = new L.Icon({
   shadowSize: [41, 41],
 });
 
-const position = [24.5422, 46.7596];
+const position = [24.6373, 46.6980]; // إحداثيات طيف المصانع - الرياض
 
 function LeafletMap() {
   return (
     <div className="responsive-map" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "500px" }}>
-      <MapContainer center={position} zoom={10} style={{ height: "400px", width: "80%" }}>
+      <MapContainer center={position} zoom={15} style={{ height: "400px", width: "80%" }}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <Marker position={position} icon={customIcon}>
           <Popup>We are here!</Popup>

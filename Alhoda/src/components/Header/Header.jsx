@@ -9,6 +9,9 @@ import "./Header.css";
 import FloatingButtons from "../buttons/floatingButtons";
 
 export default function Header() {
+  const handleCall = () => {
+    window.location.href = "tel:+966598608273";
+  };
   return (
     <div className="header">
       <div className="mainHeader">
@@ -41,7 +44,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <button className="btn btn-primary d-flex align-items-center justify-content-center gap-3" >
+      <button onClick={handleCall} className="btn2  btn-primary d-flex align-items-center justify-content-center gap-3" >
                 اتصل بنا
                 <FaPhoneAlt />
                   </button>
