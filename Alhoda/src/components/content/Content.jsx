@@ -31,7 +31,7 @@ export default function Content() {
     [
       { id: 1, name: " مطابخ حديثة", img: "/مطابخ2.jpg" },
       { id: 2, name: " L كنب حرف ", img: "/كنب حرف L 2.jpg" },
-      { id: 4, name: " كنب مودرن   ", img: "/public/كنب مودرن.jpg" },
+      { id: 4, name: " كنب مودرن   ", img: "/كنب مودرن.jpg" },
       { id: 3, name: " غرف نوم تفصيل  ", img: "/نوم تفصيل 2.jpg" },
     ],
     [
@@ -94,28 +94,28 @@ export default function Content() {
     "/L.jpg",
   ];
   const imagesDataKIT = [
-    "/public/مطبخ1.jpg",
-    "/public/مطبخ2.jpg",
-    "/public/مطبخ4.jpg",
-    "/public/مطبخ5.jpg",
-    "/public/مطبخ6.jpg",
-    "/public/مطبخ7.jpg",
-    "/public/مطبخ8.jpg",
-    "/public/مطبخ9.jpg",
-    "/public/مطبخ10.jpg",
-    "/public/مطابخ 3.jpg",
+    "/مطبخ1.jpg",
+    "/مطبخ2.jpg",
+    "/مطبخ4.jpg",
+    "/مطبخ5.jpg",
+    "/مطبخ6.jpg",
+    "/مطبخ7.jpg",
+    "/مطبخ8.jpg",
+    "/مطبخ9.jpg",
+    "/مطبخ10.jpg",
+    "/مطابخ 3.jpg",
   ];
   const imagesData711 = [
-    "/public/كنببب1.jpg",
-    "/public/كنببب2.jpg",
-    "/public/كنببب3.jpg",
-    "/public/كنببب4.jpg",
-    "/public/كنببب5.jpg",
-    "/public/كنببب6.jpg",
-    "/public/كنببب7.jpg",
-    "/public/كنبب8.jpg",
-    "/public/كنببب9.jpg",
-    "/public/كنبب10.jpg",
+    "/كنببب1.jpg",
+    "/كنببب2.jpg",
+    "/كنببب3.jpg",
+    "/كنببب4.jpg",
+    "/كنببب5.jpg",
+    "/كنببب6.jpg",
+    "/كنببب7.jpg",
+    "/كنبب8.jpg",
+    "/كنببب9.jpg",
+    "/كنبب10.jpg",
   ];
 
   const handleDotClick = (index) => {
